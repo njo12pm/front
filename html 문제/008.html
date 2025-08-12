@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {width: 800px; height: 600px; margin: 0 auto;}
+        body {display: flex; justify-content: center;}
+        table, th, tr, td {border: 1px solid black; border-collapse: collapse; text-align: center;}
+        .pink {background-color: deeppink;}
+        .green {background-color: green;}
+        .purple {background-color: blueviolet;}
+        .brown {background-color: brown;}
+        .skyblue {background-color: skyblue;}
+        .n {font-style: italic;}
+        caption {font-size: 2em; letter-spacing: 1em; font-weight: bold;}
+        .sub {color: white; font-size: 1.2em; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <table>
+        <caption>시간표</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WEN</th>
+                <th>THU</th>
+                <th>FRI</th>
+            </tr>
+            <tr>
+                <td class="n" >1</td>
+                <td rowspan="2" class="green sub">국어</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="n">2</td>
+                <td rowspan="2" class="pink sub">수학</td>
+                <td rowspan="2" class="purple sub">영어</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="n">3</td>
+                <td></td>
+                <td rowspan="3" class="pink sub">수학</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="n">4</td>
+                <td></td>
+                <td></td>
+                <td rowspan="3" class="brown sub">체육</td>
+                <td rowspan="2" class="purple sub">영어</td>
+            </tr>
+            <tr>
+                <td class="n">5</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="n">6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="skyblue sub">국사</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요청하기</title>
+</head>
+<body>
+    <!--form 방식은 데이터를 urlencoded 형식으로 요청한다-->
+    <!--네트워크에서 주고받는 데이터의 기본형식은 문자열
+        -정보를 문자열로 바꿔야 할 필요성이 생긴다
+        -username은 spring, password는 1234라는 정보를 어떻게 전달한 것인가?
+        ex) 자바스크립트 {username:"spring", password:"1234"}
+
+        -method : 서버에 요청하는 형식 get us post
+            get방식
+              -서버에서 뭔가를 읽어낼때(여러번 실행해도 상관없다)
+              -urlencoded된 요청 데이터가 주소표시줄을 이용해 서버로 전송됭다 -> 즐겨찾기
+            post방식
+              -서버에서 어떤 처리를 수행해서 서버가 변경될 때(여러번 실행하면 안된다)
+              -urlencoded된 요청 데이터가 보이지 않는다.
+    -->
+    ?
+    <form>
+        <input name="username" id="username">
+        <input type="password" name="password" id="username">
+        <button>보내기</button>
+    </form>
+
+    <form method="post">
+        <input name="username">
+        <input type="password" name="password">
+        <button>보내기</button>
+    </form>
+</body>
+</html>

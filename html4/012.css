@@ -1,0 +1,20 @@
+
+        * {margin:0; padding:0;}
+        #actor ul li {
+            display: inline-block;
+            width:100px;
+            height:35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        #actor ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        #actor ul {
+            background-color: rgb(200, 200, 200);
+        }
+        #actor ul li a:hover {
+            background-color: rgb(150, 150, 150);
+        }
