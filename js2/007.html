@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="radius">
+    <button onclick="calc();">계산하기</button>
+    <p id="area"></p>
+    <script>
+        function calc() {
+         const r = document.getElementById('radius').value;
+         const PI = 3.14;
+         const 면적 = r * r * PI;
+         document.getElementById('area').innerHTML = 면적;
+        }
+    </script>
+</body>
+</html>

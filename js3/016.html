@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="nai" placeholder="나이를 입력하시오">
+    <button onclick="gumsa()">입력</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+        function gumsa() {
+          const nai = document.getElementById('nai').value;
+          const result = (nai>65 , nai<24) ? "가격은 무료입니다" : "가격은 3000원입니다";
+          document.getElementById('result').innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>

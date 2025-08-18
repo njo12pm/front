@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리값</title>
+</head>
+<body>
+    <script>
+        // 자바의 경우 boolean과 나머지 타입은 완전히분리, JS의 경우 호환된다.
+        // 0은 거짓, !0은 참
+        console.log(true+true+false);
+        console.log(!!(true+true+false));
+
+        let a;
+        let b = null
+        let c = "";
+        console.log(!a);
+        console.log(!b);
+        console.log(!c);
+
+        console.log(!c+!c);
+    </script>
+</body>
+</html>

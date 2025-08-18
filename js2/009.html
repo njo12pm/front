@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="first" placeholder="첫번째">
+    <input id="second" placeholder="두번째">
+    <button onclick="calc();">더하기</button>
+    <p id="h"></p>
+    <script>
+        function calc() {
+        const f = document.getElementById('first').value;
+        const s = document.getElementById('second').value;
+        const nuf = Number(f);
+        const nus = Number(s);
+        document.getElementById('h').innerHTML = nuf+nus;
+        }
+    </script>
+</body>
+</html>

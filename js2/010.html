@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = "k" placeholder="국어점수를 입력하시오">
+    <input id = "e" placeholder="영어점수를 입력하시오">
+    <p id = "총점"></p>
+    <p id = "평균"></p>
+    <button onclick="calc()">총점과 평균 계산하기</button>
+    <script>
+        function calc() {
+        const k = document.getElementById('k').value;
+        const e = document.getElementById('e').value;
+        const Korea = Number(k);
+        const English = Number(e);
+        const 총점 = Korea + English;
+        const 평균 = (Korea + English)/2;
+        document.getElementById('총점').innerHTML = 총점;
+        document.getElementById('평균').innerHTML = 평균;
+        }
+    </script>
+</body>
+</html>

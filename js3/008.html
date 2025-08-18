@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+        a++;          //전위(prefix)
+        let b =10;
+        ++b;          //후위(postfix)
+        
+        //단독으로 사용할 때는 차이가 없다
+
+        let x=10, y=10;
+        const i = ++x;  //전위는 증감부터 한다
+        const j = y++;  //후위는 증감을 나중에 한다
+
+        // i:11, j:10, x:11, y:11
+    </script>
+</body>
+</html>

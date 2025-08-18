@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="정수1">
+    <input type="number" id="정수2">
+    <button onclick="panjung()">계산하기</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+        function panjung() {
+            const 정수1 = document.getElementById('정수1').value;
+            const 정수2 = document.getElementById('정수2').value;
+
+            const result = ((정수1)%35===0&&(정수2)%35===0) ? "공배수" : "공배수 아님";
+            document.getElementById('result').innerHTML=result;
+        }
+    </script>
+</body>
+</html>

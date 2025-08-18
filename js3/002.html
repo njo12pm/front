@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엄격모드</title>
+</head>
+<body>
+    <!-- legacy  vs ES6-->
+    <script>
+        'use strict'
+
+        //숫자 형변환
+        const a = "10.81";
+        //number을 변환하는 함수
+        console.log(Number(a));
+        // 정수에 해당하는 부분을 추출
+        console.log(parseInt(a));
+        console.log(parseFloat(a))
+
+        // 문자열 형변환
+        const b = 100;
+        console.log(String(b));
+        console.log(b+"");
+    </script>
+</body>
+</html>

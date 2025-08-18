@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="three" value="3">
+    <input id="four" value="4">
+    <input id="five" value="5">
+    <p id="target"></p>
+    <script>
+        const x = document.getElementById('three').value;
+        const y = document.getElementById('four').value;
+        const z = document.getElementById('five').value;
+        document.getElementById('target').innerHTML = x*y*z;
+    </script>
+</body>
+</html>
