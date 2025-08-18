@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BMI계산기</h1>
+    <input type="number" id="ki" placeholder="키를입력하시오">
+    <input type="number" id="mom" placeholder="체중을 입력하시오">
+    <button onclick="cal()">입력</button>
+    <hr>
+    <p id = "result"></p>
+    <script>
+        function cal() {
+            const ki = document.getElementById('ki').value;
+            const mom = document.getElementById('mom').value;
+            const bmi = mom/((ki/100)*(ki/100));
+            const result = (bmi<=23) ? "정상체중입니다." : "정상체중을 넘습니다.";
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
