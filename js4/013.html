@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="val" placeholder="면적입력...">
+    <select onchange="ch()" id="select">
+        <option disabled selected>선택하세요</option>
+        <option>평으로</option>
+        <option> 제곱미터로</option>
+
+    </select>
+    <input type="text" id="result" disabled>
+    <script>
+        const $selet = document.getElementById("selet");
+        const $val = document.getElementById("val");
+        const $result = document.getElementById("result");
+        function ch() {
+            const val=$val.value;
+            
+            if (select==="평으로") {
+                const pyung=val/3.3;
+                $result.value = pyung;
+            }
+            else {
+                const meter = val*3.3;
+                $result.value = meter;
+            }
+        }
+    </script>
+</body>
+</html>

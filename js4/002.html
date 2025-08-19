@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>홀짝 판정</h1>
+    <input type="text" id="val">
+    <button onclick="panjung();">판정하기</button>
+    <hr>
+    <p id="target"></p>
+    <script>
+        const $target = document.getElementById('target');
+        const $val = document.getElementById('val');
+        function panjung() {
+            const val = $val.value;
+            $target.innerHTML = (val%2==0) ? "짝수" : "홀수";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="nai" placeholder="나이입력">
+    <button onclick="pandan()">입력</button>
+    <hr>
+    <p id="target"></p>
+    <script>
+        function pandan() {
+            const nai = document.getElementById("nai").value;
+            if (nai>=18) {document.getElementById("target").innerHTML="성인"} 
+            else {document.getElementById("target").innerHTML="미성년"}
+        }
+    </script>
+</body>
+</html>

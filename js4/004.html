@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number" placeholder="점수를 입력하시오">
+    <button onclick="panjung()">입력</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+        const $number=document.getElementById('number');
+        const $result=document.getElementById('result');
+        function panjung() {
+          const number= $number.value;
+          $result.innerHTML = (number>=70) ? "합격" : "불합격";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="money" placeholder="한달급여를 입력하시오">
+    <input type="number" id="month" placeholder="근무개월수를 입려하시오">
+    <button onclick="수령액()">수령액 출력하기</button>
+    <button onclick="세금()">세금 출력하기</button>
+    <hr>
+    <p>수령액:<span id="salary"></span>원</p>
+    <br><br>
+    <p>세금:<span id="tax"></span>원</p>
+    <script>
+        const $money = document.getElementById('money');
+        const $month = document.getElementById('month');
+        const $salary = document.getElementById('salary');
+        const $tax = document.getElementById('tax');
+        function 수령액() {
+            const money = $money.value;
+            const month = $month.value;
+            $salary.innerHTML=money*month;
+        }
+        function 세금() {
+            const money = $money.value;
+            const month = $month.value;
+            const mm = money*month
+            $tax.innerHTML=mm*0.33;
+        }
+    </script>
+</body>
+</html>

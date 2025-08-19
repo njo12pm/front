@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="light">
+    <button onclick="sw()">swich</button>
+    
+    <script>
+        document.getElementById('light').src="https://www.w3schools.com/js/pic_bulboff.gif"
+        let count = 1
+        function sw() {
+            count++;
+            if (count%2===0) {document.getElementById('light').src="https://www.w3schools.com/js/pic_bulbon.gif"} 
+            else {document.getElementById('light').src="https://www.w3schools.com/js/pic_bulboff.gif"}
+        }
+    </script>
+</body>
+</html>

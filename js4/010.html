@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="on()" id="on">Turn on the light</button>
+    <img id="img">
+    <button onclick="off()" id="off">Turn off the light</button>
+    <script>
+        document.getElementById('img').src="https://www.w3schools.com/js/pic_bulboff.gif"
+        document.getElementById('off').style.visibility="hidden";
+        function on() {
+            document.getElementById('img').src="https://www.w3schools.com/js/pic_bulbon.gif"
+            document.getElementById('on').style.visibility="hidden";
+            document.getElementById('off').style.visibility="visible";
+        }
+        function off() {
+            document.getElementById('img').src="https://www.w3schools.com/js/pic_bulboff.gif"
+            document.getElementById('off').style.visibility="hidden";
+            document.getElementById('on').style.visibility="visible";
+        }
+    </script>
+    
+</body>
+</html>

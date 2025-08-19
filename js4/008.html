@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="menu">
+        <option disabled selected value="-1">메뉴를 선택하세요</option>
+        <option>짜장</option>
+        <option>짬뽕</option>
+        <option>탕수육</option>
+    </select>
+    <button onclick="print()">선택</button>
+    <script>
+        function print() {
+            const selectedMenu = document.getElementById("menu").value;
+            const result = selectedMenu<0?"메뉴를 선택하세요":selectedMenu+"선택"
+            console.log(result);
+        }
+    </script>
+</body>
+</html>
