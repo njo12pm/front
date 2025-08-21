@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 작업</title>
+</head>
+<body>
+    <ul id="menu">
+
+    </ul>
+    <script>
+        const ar=["삼선짜장","삼선짬뽕","삼선볶음밥"]
+        const $menu=document.getElementById("menu")
+        let html=''
+
+        for(menu of ar) { 
+            html=html+`<li>${menu}</li>`
+        }
+        $menu.innerHTML = html;
+    </script>
+</body>
+</html>

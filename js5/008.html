@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ar=[90, 80, 60, 75, 85, 55, 95]
+        let count = 0;
+        let hap = 0;
+        for(ele of ar) {
+            if (ele>=90) {"우수";}
+            else if (ele>=70) {
+                hap+=ele;
+                count++;
+                "합격";
+            }
+            else {"불합격"}
+        }
+    console.log(hap/count);
+    </script>
+</body>
+</html>

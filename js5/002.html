@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {color:red}
+        .blue {color:blue}
+        #app {
+            width: 600px;
+            margin : 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>합격여부 확인하기</h1>
+        <input type="text" id="korean" placeholder="국어점수를 입력하시오">
+        <input type="text" id="english" placeholder="영어점수를 입력하시오">
+        <button onclick="panjung()">"확인하기"</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        
+        function panjung() {
+            const kor = +document.getElementById("korean").value;
+            const eng = +document.getElementById("english").value;
+            let message;
+            if (kor>=70 && eng>=70) {
+                message = '<p class = "blue">합격</p>'
+            } 
+            else {
+                message = '<p class = "red">불합격</p>'
+            }
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

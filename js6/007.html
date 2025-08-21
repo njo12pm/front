@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="name" placeholder="아이돌 이름...">
+        <select id="role">
+            <option disabled selected value="0">역할 선택</option>
+            <option>리더</option>
+            <option>보컬</option>
+            <option>댄서</option>
+        </select>
+        <button onclick="추가()">추가</button>
+        <hr>
+        <ul id="idol">
+            
+        </ul>
+    </div>
+    <script>
+        const idols = [];
+        const $name = document.getElementById('name');
+        const $role = document.getElementById('role');
+        const $idol = document.getElementById('idol');
+
+        function 추가() {
+            const name = $name.value;
+            const role = $role.value;
+            idols.push({name,role});
+            출력();
+            $name.value = '';
+            $name.focus();
+        }
+        
+        function 출력() {
+            let html='';
+            for(const idol of idols) {
+                html+=`<li>${idol.name} ${idol.role} <button onclick='삭제("${idol.name}")'>삭제</button></li>`;
+            }
+            $idol.innerHTML=html;
+        }
+
+        function 삭제(name) {
+            for(let i=0; i<idols.length; i++) {
+                if(idols[i].name===name) {
+                    idols.splice(i,1);
+                    break;
+                }
+            }
+            출력();
+        }
+    </script>
+</body>
+</html>

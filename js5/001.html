@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 : if,swich</title>
+    <style>
+        .red {color:red}
+        .blue {color:blue}
+        .green {color:green}
+    </style>
+</head>
+<body>
+    <h1>점수입력</h1>
+    <input id="jumsu">
+    <button onclick="pp()">입력</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+        const $result = document.getElementById("result")
+        const $jumsu = document.getElementById("jumsu")
+        function pp() {
+            const jumsu=$jumsu.value;
+            if(jumsu>=90) {
+                $result.innerHTML = <p>${jumsu}우수</p>
+            } else if(jumsu>=70) {
+                $result.innerHTML = "합격"
+            } else {
+                $result.innerHTML = "불합격"
+
+            }
+        }
+    </script>
+</body>
+</html>

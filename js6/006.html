@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이돌</title>
+    <style>
+        .gold{color: gold;}
+        .silver{color: silver;}
+        .navy{color: navy;}
+    </style>
+</head>
+<body>
+    <ul id="member">
+
+    </ul>
+    <script>
+        const mem=[
+            {name:'카리나',role:'leader',nai:25},
+            {name:'윈터',role:'vocal',nai:24},
+            {name:'닝닝',role:'vocal',nai:22},
+            {name:'지젤',role:'rapper',nai:24}
+        ]
+
+        const $member=document.getElementById('member');
+        html=''
+        for(const member of mem) {
+            if (member.nai===25) {
+                html+=`<li class=gold>${member.name}</li>`
+            } else if (member.nai===24) {
+                html+=`<li class=silver>${member.name}</li>`
+            } else if (member.nai===22) {
+                html+=`<li class=navy>${member.name}</li>`
+            }
+        }
+        $member.innerHTML = html;
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="list">
+    <button onclick="add()">추가하기</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+        const ar=[]
+        const $list = document.getElementById("list")
+        const $result = document.getElementById("result")
+        function add() {
+            if ($list.value==='') {
+                return;
+            }
+            const list = $list.value;
+
+            ar.push(list)
+            $list.value='';
+            $list.focus();
+
+            let html = '';
+            for (const el of ar) {
+                html += `<li>${el}</li>`; 
+            }
+            $result.innerHTML = html;
+
+        }
+    </script>
+</body>
+</html>

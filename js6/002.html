@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * { margin: 0; padding: 0; box-sizing: border-box; }
+        #app {width:1000px; border:1px; margin: 0 auto;}
+        header,nav{
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        aside {
+            width:100px;
+            height:100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: lightblue;
+            float:left;
+        }
+        section {
+            width:800px;
+            background-color: blueviolet;
+            float:left;
+            min-height: 600px;
+        }
+        footer {
+            text-align: center;
+            background-color: orange;
+        }
+        main {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>사이트 로고</header>
+        <nav>메인 메뉴</nav>
+        <main>
+            <aside>왼쪽</aside>
+            <section>본문</section>
+            <aside>오른쪽</aside>
+        </main>
+        <footer>아래쪽</footer>
+    </div>
+</body>
+</html>

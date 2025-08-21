@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="val">
+    <button onclick="입력()">입력</button>
+    <hr>
+    <ul id="target"></ul>
+    <script>
+        const ar = []
+        const $val=document.getElementById("val")
+        const $target=document.getElementById("target")
+        function 입력() {
+            if ($val==='') {return;}
+            const val= $val.value;
+            $val.value='';
+            $val.focus();
+            ar.push(val);
+            console.log(ar);
+            let html=''
+            for(const el of ar) {
+                html=+<li>${el}</li>;
+            }
+            $target.innerHTML = html
+        }
+    </script>
+</body>
+</html>

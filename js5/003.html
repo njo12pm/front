@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {color:blue}
+        .green {color:green}
+        .red {color:red}
+        #app {
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>등급확인하기</h1>
+        <input type="text" id="jumsu">
+        <button onclick="cal()">입력</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function cal() {
+            const jumsu = +document.getElementById("jumsu").value 
+            if (jumsu>100||jumsu<0) {
+                alert("점수를 다시입력하십시오")
+            document.getElementById("jumsu").value="";
+            document.getElementById("jumsu").focus();
+            return;
+            }
+            let message;
+            if (jumsu>=90) {
+                message = '<p class=blue>"A등급"</p>'
+            } else if (jumsu>=80) {
+                message = '<p class=green>"B등급"</p>'
+            } else if (jumsu>=70) {
+                message = '<p class=green>"C등급"</p>'
+            } else if (jumsu>=60) {
+                message = '<p class=green>"D등급"</p>'
+            } else {
+                message = '<p class=red>"F등급"</p>'
+            }
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</body>
+</html>
