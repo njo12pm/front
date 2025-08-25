@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+            {name:'홍길동',jumsu:75},{name:'전우치',jumsu:60},{name:'임꺽정',jumsu:80}
+        ]
+        let sum=0;
+        for(let i=0; i<students.length; i++) {
+            if(students[i].jumsu>=70) {
+                sum+=students[i].jumsu;
+            };
+        }
+        
+        let count=0;
+        for(let i=0; i<students.length; i++) {
+            if(students[i].jumsu>=70) {
+                count++;
+            };
+        }
+        let avg=sum/count;
+
+        const result =[]
+        for(const s of students) {
+            if(s.jumsu>=70) {
+                result.push(s.name);
+            };
+        }
+        
+
+        console.log(sum);
+        console.log(avg);
+        console.log(result);
+    </script>
+</body>
+</html>

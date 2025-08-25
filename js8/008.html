@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ar= [75,80,90,65,85];
+
+        function getNumber(ar) {
+            let number=0;
+            for(const el of ar) {
+                if(el>=70) {
+                number++; }
+            }
+            return number;
+        }
+        const 숫자 = getNumber(ar);
+        console.log(숫자);
+
+        function sum(ar) {
+            let sum=0
+            for(const el of ar) {
+                if(el>=70) {
+                sum+=el}
+            }
+            return sum;
+        }
+        const 합계 = sum(ar);
+        console.log(합계);
+
+        const 평균 = sum(ar)/getNumber(ar);
+        console.log(평균);
+    </script>
+</body>
+</html>

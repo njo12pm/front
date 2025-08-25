@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+    <div>할일</div>
+    <input type="text" id="title">
+    <button onclick="add">추가하기</button>
+    <hr>
+    <table>
+        <thead>
+            <th>순서</th><th>할일</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+        
+    </table>
+    <script>
+        $tbody = document.getElementById('tbody');
+        let tno=4
+        const todos = [
+        {tno:1, title:'자바공부',finish:false},
+        {tno:2, title:'영어공부',finish:false},
+        {tno:3, title:'수학공부',finish:false}
+        ]
+        function print() {
+            html=''
+            for(todo of todos) {
+                html+= `<tr><td>${todo.tno}</td><td>${todo.title}</td><td><button onclick='remove(${todo.tno})'>삭제</button></td></tr>`
+            }
+            $tbody.innerHTML =html;
+        }
+        print();
+
+        function remove(tno) {
+            for(let i=0; i<todos.length; i++) {
+                if(todos[i].tno===tno) {
+                    todos.splice(i,1)
+                    break;
+                }
+            }
+            print();
+        }
+    </script>
+</body>
+</html>

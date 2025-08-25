@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+    <button id="btn">안녕</button>
+    <script>
+        // 합수
+        // 익명함수
+        // 콜백함수 : 개발자가 함수를 작성한 다음 위탁해서 실행
+
+        
+
+        //이벤트 : 사용자의 행동
+        //이벤트를 처리하는 함수 : 이벤트 핸들러(handler)
+        //이벤트를 처리하는 방식 - onclick
+
+        const insa = function() {
+            alert("안녕하세요");
+        }
+
+        const $btn = document.getElementById('btn');
+        $btn.addEventListener("click", insa)
+    </script>
+</body>
+</html>

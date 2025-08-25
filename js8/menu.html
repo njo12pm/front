@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 CRUD</title>
+</head>
+<body>
+    <input type="text" id="menu" placeholder="메뉴입력">
+    <button onclick="addMenu()">추가</button>
+    <hr>
+    <ul id="menus"></ul>
+
+    <script>
+        const $menus = document.getElementById("menus")
+        const $input = document.getElementById("menu")
+        const menus= [{mno:1, name:'김치찌개'},{mno:2,name:'돈까스'}];
+        let mno = 3;
+        const $ul = document.getElementById('menus');
+
+        function printMenus() {
+            let html=''
+            for(el of menus) {
+                html+= `<li>${el.name}<button onclick='remove(${el.mno})'>삭제</button></li>`
+            }
+            $menus.innerHTML =html;
+        }
+        printMenus();
+
+        function addMenu() {
+            const name = $input.value;
+            $input.value=''
+            $input.focus();
+            const obj = {mno:mno++, name:name}
+            menus.push(obj);
+            printMenus();
+        }
+
+        function remove(mno) {
+            for(let i=0; i<menus.length; i++) {
+                if(menus[i].mno===mno) {
+                    menus.splice(i,1);
+                    break;
+                }
+            }
+            printMenus();
+        }
+    </script>
+</body>
+</html>

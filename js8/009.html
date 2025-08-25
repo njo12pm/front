@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 연습</title>
+</head>
+<body>
+    <script>
+        // 두 숫자의 합게
+        function sum1(x,y) {
+            return x+y;
+        }
+
+        //JS의 변수는 함수를 담을 수 있다
+        //sum2에 담고 나면 hap이라는 이름은 사용할 수 없다. sum2가는 이름만 사용가능
+        const sum2= function hap(x,y) {
+            return x+y;
+        }
+        sum2(10,20);
+
+        //그렇다면 hap이라는 이름이 필요한가? 굳이??
+        //이름없이 함수를 만들 수 잇다 ->익명함수
+        const sum3 = function (x,y) {
+            return x+y;
+        }
+
+        const insa = function() {
+            console.log("안녕하세요")
+        }
+        // setTimeout(기능, 일정시간)
+        setTimeout(insa,5000);
+
+        setTimeout(function() {
+            console.log("까꿍")
+        },5000)
+    </script>
+</body>
+</html>
